@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact card</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function(){
+
+        $(document).on("click",".right_align p",function(){
+            $(this).hide()
+            $(this).siblings().show(); 
+           
+        })
+
+        $('form').submit(function(){
+          var first_name=$('input[name="first_name"]').val();
+          var last_name=$('input[name="last_name"]').val();
+          var desc = $('textarea[name="description"]').val();
+          var html_str = `<div class="right_align">
+                                <p class="name">${first_name} ${last_name}</p> 
+                                <p class="para"> ${desc}</p>
+                                 
+                         </div>` ;       
+        $('body').append(html_str);
+       
+
+
+    return false;
+        })
+    })
+
+    </script>
+</head>
+<body>
+
+        <form>
+                <label>
+                First name<input type= "text"  name="first_name">
+                </label><br><br>
+        
+                <label > 
+                Last name <input type= "text" name="last_name">
+                </label><br><br>
+        
+                <h3>Description</h3>
+                <textarea name="description" rows="10" cols="50"></textarea><br><br>
+
+                <input class="btn" type="submit" value="Add User">     
+        
+        </form>
+
+    
+</body>
+</html>

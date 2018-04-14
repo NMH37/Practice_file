@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+
+#container {
+    height: 975px;
+    margin:auto;
+    width:975px;
+    background: steelblue;
+}
+
+img {
+    display: block;
+
+
+}

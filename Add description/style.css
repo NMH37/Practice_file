@@ -1,0 +1,35 @@
+
+
+*{
+    padding:0px;
+    margin:auto;
+}
+
+form{
+    margin-top:40px;
+    display:inline-block;
+}
+.right_align {
+
+    display: inline-block;
+    margin-left:100px;
+    background: steelblue;
+    color:white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25em;
+    width: 200px;
+    height:100px;
+    vertical-align: top;
+    margin-top: 40px;
+    
+}
+
+  .para{
+      display:none;
+  }
+
+  p {
+
+    margin: 10px;
+  }

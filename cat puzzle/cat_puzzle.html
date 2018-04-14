@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Puzzle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $('img').click(function() { 
+                            var src1 = $(this).attr("src");
+                            var src2 = $(this).attr("data-alt-src");
+                            $(this).attr("data-alt-src",src1);
+                            $(this).attr("src",src2);         
+                    })
+        })
+        </script>
+
+
+</head>
+<body>
+    <div id="container">
+        <img src="img/cat0.png" data-alt-src="img/ninja0.png">
+        <img src="img/cat1.png" data-alt-src="img/ninja1.png">
+        <img src="img/cat2.png" data-alt-src="img/ninja2.png">
+        <img src="img/cat3.png" data-alt-src="img/ninja3.png">
+        <img src="img/cat4.png" data-alt-src="img/ninja4.png">
+        
+    </div>
+</body>
+</html>

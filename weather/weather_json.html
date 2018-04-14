@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+
+<script>
+
+$(document).ready(function(){
+
+$.get('http://api.openweathermap.org/data/2.5/weather?q=seattle&&appid=0e292b423c69f5bc79775df9ba3bb77a',function(response){
+
+
+
+
+console.log(response);
+
+
+
+
+},'json') // end of ajax
+
+
+})
+
+
+
+</script>
+
+
+
+
+</head>
+
+
+
+
+<body>
+        <h1 class="top_bar"> Today's Forecast<br></h1>
+        <h1>City </h1><br>
+        <h1 class="temp"> Weather </h1>
+        <form>
+          <input type="text" name="city_name"><br>
+          <input type="button" id="button" value="Search Weather">
+          
+        </form><br><br>
+        <h2 class="top_bar"> Nayyer Haseem Practice File<br>
+          Json Data from Open Weather Api
+        </h2>
+</body>
+</html>

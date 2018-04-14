@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+<script> 
+
+
+$("doucment").ready(function(){
+     base_url = 'http://api.openweathermap.org/data/2.5/weather?q='; 
+
+      api_key = '&units=imperial&&appid=0e292b423c69f5bc79775df9ba3bb77a';
+
+        $("form").submit(function(){
+
+                var city_name=$('input[name="city_name"]').val();
+
+                     var weather_url = base_url+city_name+api_key;
+
+                        $.get(weather_url,function(response){
+
+                            var city= (response.name);
+                            var temperature= (response.main.temp);
+                            var html_str =`
+                                          <h1>${city}</h1>
+                                           <h1>${temperature}°F</h1>
+                            
+                            
+                            
+                            
+                            `;
+
+
+                        $(".updated_weather").html(html_str);
+
+
+
+
+
+
+
+
+
+        },'json')// end of Ajax
+
+
+
+
+
+    return false;
+    })// end of submit call back
+
+
+
+
+
+
+
+
+
+
+
+
+})// end of ready call back
+
+
+
+
+
+
+
+</script>
+
+</head>
+
+<body>
+        
+                <h1 class="top_bar"> Current Weather<br></h1>
+                <div class="updated_weather">
+                    <h1>City </h1><br>
+                    <h1 > --.--°F </h1>
+                </div>
+                <form>
+                  <input type="text" id="city_name "name="city_name"><br><br>
+                  <input type="submit" id="button" value="Search Weather">
+                  
+                </form><br><br>
+                <h2 class="top_bar"> JSON Data from Open Weather API<br></h2>
+                  
+                
+        
+    
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+.container{
+    width: 975px;
+    background: slategrey;
+    margin:auto;
+
+}
+h1 {
+    margin: 30px;
+    padding:20px;
+    color: white;
+    font-weight: normal;
+}
+img {
+    width:180px;
+    display:inline-block;
+   
+    border:solid 2px grey;
+
+    
+}
+.sub {
+    margin:20px;
+    width:200px;
+    height: 100px;
+    display: inline-block;
+}
+.button {
+    background:linear-gradient(#42AAEC,#1468A8);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius:2px;
+    margin-left: 400px;
+    margin-bottom: 20px;
+ }

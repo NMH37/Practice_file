@@ -1,0 +1,47 @@
+*{
+
+    padding:0px;
+    margin:0px;
+}
+
+*{
+    outline: tomato dashed;
+}
+
+
+.header{
+    margin-top:20px;
+    margin-left:100px;
+    width:975px;
+    height:100px;
+    background: lightseagreen;
+    
+}
+   .header h1{
+       padding: 10px;
+       display: inline-block;
+   } 
+
+   .header img{
+       width: 30px;
+       display: inline-block;
+       
+
+   }  
+
+   .contact{
+       display:inline-block;
+       height: 30px;
+       width: 100px;
+       margin-left:600px;
+
+   }
+     .contact img{
+         width:30px;
+     }
+.main{
+    margin-left:100px;
+    background: midnightblue;
+    width:975px;
+    height:600px;
+}

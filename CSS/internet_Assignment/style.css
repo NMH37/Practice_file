@@ -1,0 +1,249 @@
+*{
+    padding : 0;
+    margin: 0;
+}
+
+/*{ outline: tomato dashed;
+}*/
+main{
+    width:1095px;
+    
+}
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    width:1070px;
+    height: 1000px;
+    display: block;
+}
+span{
+color:steelblue;
+}
+
+ .red{
+     color:red;
+ }
+ 
+li{
+    font-size: 15px;
+    line-height: 1.6;
+}
+    .globe{
+
+        position: relative;
+        top: +30px;
+        left:+50px;
+        display: inline-block;
+    }
+
+    h1{
+        display: inline-block;
+        position: relative;
+        left:150px;
+        font-size: 3em;
+    }
+
+
+    .worldwide
+    { 
+        width:980px;
+        height: 50px;
+        background:steelblue;
+        margin-left: 50px;
+        color:white;
+        padding-left:40px;
+        padding-top: 10px;
+        word-spacing: 5px;
+        font-size: 2em;
+    }
+
+    .what{
+
+        
+        margin-left:50px;
+        padding-top:0px ;
+        display: inline-block;
+        width: 300px;
+        height:auto ;
+
+    }   .sub_header{
+     background: linear-gradient(lightgray,white);
+     
+    }
+        .sub_header p{
+       
+            width: 260px;
+            height: 75px;
+            display: inline-block;
+            margin-bottom: 0px;
+            margin-left: 50px;
+            padding-left: 7px;
+        }
+    
+    .two_buttons{
+        width:270px;
+        margin-bottom: 30px;
+        padding-bottom:30px;
+        border-bottom: 2px rgb(126, 124, 124) solid;
+    }
+        .button {
+            background-color: steelblue; /* Green */
+            border: none;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            margin: 8px 2px;
+            cursor: pointer;
+            border-radius: 7px;
+            width: 250px;
+            text-shadow:white;
+            
+        }
+        .button2{
+            background-color:orange;
+        }
+
+        .reinvent{
+
+            width :270px;
+            height: 500px;
+        }
+
+            .ad{
+            width: 270px;
+            height: 400px;
+        }
+    
+            .reinvent h2 {
+                position: relative;
+                top: -350px;
+                left:-5px;
+                color:white;
+                width:200px;
+                margin-left:30px;
+            text-align-last: center;
+        }  
+            .ninja{
+
+                position: relative;
+                top: -300px;
+                left: 80px;
+            }
+            .btn {
+                position: relative;
+                top: -250px;
+                left: 20px;
+                width: 210px;
+                background-color: skyblue;
+                color: white;
+                font-size: 16px;
+                padding: 16px 30px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+
+    main{
+
+   width:1095px;
+   height:800px;
+    }  
+
+
+        .dns{
+         width:730px;
+         height:700px;
+         vertical-align: top;
+         display: inline-block;  
+      }
+
+         
+        .phone{
+            display: inline-block;
+            width: 730px;
+            height: 110px;
+        }
+
+          .phone h3 {
+
+
+            margin-top: 10px;
+            color:steelblue;
+            padding-left: 15px;
+            
+
+           }
+                .home{
+            padding-top:8px;
+            
+    
+           }
+           .dns h3{
+               color:steelblue;
+           }
+
+           .phn{
+            width: 748px;
+            margin-left:0px;
+            text-align: right;
+            border-bottom: 2px rgb(126, 124, 124) solid;
+           }
+
+           .phn img{
+
+            margin-top:20px;
+           }
+           .info{
+            display: inline-block;
+            vertical-align: top;
+            width: 150px;
+            height: 50px;
+
+           }    
+                .info h2{
+
+                    color:skyblue;
+                
+                }
+       
+        .dns li{
+           margin-left:40px;
+        } 
+        .server img{
+            margin-left: 100px;
+        }
+
+        .footer{
+            border-style:solid; 
+            border-color:steelblue;
+            margin-top: 50px;
+            margin-left: 30px;
+            width: 600px;
+            height:200px; 
+            box-shadow: 2px 0px;
+        }
+        .footer img {
+            margin-left:20px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+          .footer p{
+
+            display: inline-block;
+            
+          }
+           .footer h2{
+               display: inline;
+           }   
+              .three_big{
+
+                display:inline-block;
+                width: 400px;
+              }

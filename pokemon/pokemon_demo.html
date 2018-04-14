@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+
+    $(document).ready(function(){
+           // for loading all pokemon
+           var base_url='http://pokeapi.co/api/v2/pokemon/';
+                for (var i= 1; i <= 10; i++){
+                    $.get(base_url+i, function(response){
+                      
+                        var html_str = `
+                                        <div class="poke_id" >
+                                         <img id="${i}" src="${response.sprites.front_shiny}">
+                                         </div>
+                            `;
+                            var id_found = attr()
+                             console.log('inage id is:'id_found)
+                             $("#pokemon").append(html_str);            
+                     },'json') //end of ajax
+                }//end of for loop
+         //$("img").on('click', function(){
+           //  var clicked = $(this).attr('id');
+          // $.get("http://pokeapi.co/api/v2/pokemon/"+ clicked +"/",function(poke_info){
+               //var html_str= `
+
+                         //<h3 class="poke_info"> Weight: ${poke_info.weight}</h1>
+                         //<h3> Height: ${poke_info.height}<h3>
+
+
+
+               //`;
+             
+               // $("#info").html(html_str);
+
+           //},'json')
+
+
+        // })
+     
+    })// document ready
+
+
+   </script>
+</head>
+
+
+<body>
+
+    <div id="pokemon"> </div>
+
+    <div id="info"></div>
+
+
+
+</body>
+
+
+</html>
+

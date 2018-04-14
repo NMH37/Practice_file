@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Users</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function(){
+    $("form .btn").click(function(){
+           var first_name=$('input[name="first_name"]').val();
+           var last_name=$('input[name="last_name"]').val();
+           var email_add=$('input[name="email"]').val();
+           var contact_num=$('input[name="contact"]').val();
+           var html_str =`<tr>
+                          <td>${first_name} </td>
+                          <td>${last_name }</td>
+                          <td>${email_add }</td>
+                          <td>${contact_num }</td>
+                          </tr>`
+           
+           $("tbody").append(html_str);
+           return false;
+    })
+    })
+    </script>
+
+</head>
+
+<body>
+        <table>
+                <thead>
+                          <th>Firstname</th>
+                          <th>Lastname</th> 
+                          <th>Email Address</th>
+                          <th>Contact #</th>
+                        
+                </thead>
+                <tbody>
+                       
+                </tbody>
+        </table>            
+        <form>
+        
+                <h1>Add Users</h1>
+        
+                <label>
+                First name<input type= "text"  name="first_name">
+                </label><br><br>
+        
+                <label > 
+                Last name <input type= "text" name="last_name">
+                </label><br><br>
+        
+                <label>
+                Email  Address  <input type= "text"  name="email">
+                 </label><br><br>
+
+                 <label>
+                Contact # <input type= "number"  name="contact">
+                </label><br><br>    
+                <input class="btn" type="submit" value="Submit">     
+        
+        </form>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

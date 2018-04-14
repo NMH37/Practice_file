@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+                                       //Get all pokemon and save their id
+        for (var i = 1; i < 26; i++) {  
+
+            $('#pokemon').append(`<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${i}.png" id="${i}">`);
+
+        }
+                                      // On click grab their ID and call Ajax to get data!
+            $('img').on('click',function(){
+
+                    var html_str= "";
+
+                    var id_found= $(this).attr("id");
+
+                         $.get('https://pokeapi.co/api/v2/pokemon/'+id_found,function(pokemon){
+                           
+                            html_str = ` 
+                                        <h1>${pokemon.name}</h1>
+                                        <img  src="${pokemon.sprites.front_shiny}">
+                                        <h2>Type </h2>
+                                        <ul> 
+                                        `;
+                            $("#pokemon_info").html(html_str);  
+                                                               // use for loop to add the list items in html string
+                            html_str= "";
+                                for (var i=0; i< pokemon.types.length; i++ ) { 
+
+                                    html_str += `<li>${pokemon.types[i].type.name}</li>`;
+                       
+                                 }
+
+                            html_str +=`
+                                        </ul>
+                                        <h2> Weight: ${pokemon.weight}</h2>
+                                         <h2>Height: ${pokemon.height}</h2>
+
+                                         `;
+                    $("#pokemon_info").append(html_str);
+
+
+                        
+                        
+                       
+                     },"json")
+                     
+            })
+
+            
+    })
+</script>
+
+
+
+
+</head>
+<body>
+    <div id="pokemon"></div>
+    <div id="pokemon_info"></div>     
+</body>
+</html>
+
