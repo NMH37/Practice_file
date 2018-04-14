@@ -1,0 +1,35 @@
+Nayyers-MacBook-Air:DojoAssignments nayyermhaseem$ ls -R
+IOS		Python		netCore
+MEAN		Ruby		webFundamentals
+
+./IOS:
+about.txt
+
+./MEAN:
+about.txt
+
+./Python:
+about.txt
+
+./Ruby:
+about.txt
+
+./netCore:
+about.txt
+
+./webFundamentals:
+CSS		Git		HTML		Javascript	about.txt
+
+./webFundamentals/CSS:
+about.txt
+
+./webFundamentals/Git:
+about.txt
+
+./webFundamentals/HTML:
+about.txt		indentation.html
+
+./webFundamentals/Javascript:
+about.txt
+Nayyers-MacBook-Air:DojoAssignments nayyermhaseem$ 
+

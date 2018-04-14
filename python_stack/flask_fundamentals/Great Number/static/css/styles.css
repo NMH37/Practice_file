@@ -1,0 +1,24 @@
+body{
+
+    margin: auto;
+    padding: 0px;
+}
+
+.won{
+    background-color: seagreen;
+    display:block;
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+.try_again{
+    background-color: red;
+    display:block;
+    width: 100px;
+    height: 100px;
+    color:white;
+}
+
+h2{
+    color:white;
+}
