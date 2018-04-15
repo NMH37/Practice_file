@@ -5,3 +5,5 @@ app.secret_key="wfjhgh w bchgyghfh"
 @app.route('/')
 def index():
     return render_template('index.html')
+
+app.run(debug=True)

@@ -5,8 +5,9 @@
     background-color: steelblue
 }
 .farm, .cave, .home,{
-
-
+    margin:100px;
+    vertical-align: top;
+    display:inline-block;
     width: 70px;
     height: 30px;
     background-color: springgreen;
