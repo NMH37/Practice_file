@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- linking a css style sheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+<!-- linking a javascript file -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/survey.js') }}"></script>
+<!-- linking an image -
+<img src="{{ url_for('static', filename='img/my_img.png') }}">-->
+    <title>Dojo survey</title>
+</head>
+
+<body>
+        
+<form action="/process"  method="POST">
+
+        <h1>My Survey Form</h1>
+
+        <label>
+        Your Name:<input type= "text" id="first_name" name="name">
+        </label><br><br>
+
+        <label > 
+        Dojo Location: <input type= "text" id="city" name="city">
+        </label><br><br>
+
+        <p> What is your favourite language</p>
+        <select type= "text" name="fav_lang">
+            <option value="JavaScript">JavaScript</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+            <option value="Ruby">Ruby</option>
+            <option value="R">R</option>
+        </select> <br><br>
+
+        <p> A short description about yourself</p>
+        <textarea name="description" rows="10" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        
+
+</form>
+
+    
+</body>
+</html>
