@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logged in/Registered</title>
+</head>
+<body>
+    <h1> Welcome to the Wall </h1>  <h4><a href='/logout'>Log out </a></h4>
+    <hr>
+    
+    <h3>Post a message</h3>
+    <form action="/post" method="POST" >
+       <textarea  name="comment" rows="4" cols="50" >
+            Enter text here...</textarea>
+    
+        <input type="submit" value="Post a message">
+    </form>
+    
+    {% for post in wall_posts %}
+            {{ cmt_on_msg }}
+                
+                   
+                
+          
+    <p>  posted by
+        <fieldset>
+        <legend>{{post.first_name}}</legend>
+        {{post.created_at}} </p>
+        {{post.content}}
+        </fieldset>
+        {{post.id}}
+        <form action='/add_comment/{{post['id']}}' method="POST">
+        <textarea  name="add_comment" rows="4" cols="50" >
+                Post comments here...</textarea>
+       <input type='submit' value='Add Comment'> 
+    </form>
+    </p>   
+    {% endfor %}
+</body>
+</html>
+

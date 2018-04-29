@@ -1,0 +1,12 @@
+if not(len(request.form['last_name'])>1 and request.form['last_name'].isalpha()):
+        flash('Enter Valid last name, all alphabetical and atleast 2 characters')
+        return redirect('/')
+    if not EMAIL_REGEX.match(request.form['email']):
+        flash('invalid email')
+        return redirect('/')
+    if not(len(request.form['password'])> 7 and request.form['password'].isalnum):
+        flash('Password must be atleast 8 characters long and include one non-alpha charachter !@#$%^(*&')
+        return redirect('/')
+    if not(request.form['password']== request.form['confirm_password']):
+        flash(' Password confirmation not valid')
+        return redirect('/')
