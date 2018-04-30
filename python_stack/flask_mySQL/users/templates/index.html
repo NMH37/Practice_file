@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+ 
+    <table>
+        <hr>
+        <tr>
+            <th>Id</th>
+            <th> Full Name</th>
+            <th>Email </th>
+            <th>Created at </th>
+          
+        </tr>
+        <hr>
+        
+        {% for item in email_found %}
+        <tr>
+            <td> {{item['id']}}</td>
+            <td>{{item['first_name']}} 
+            {{item['last_name']}} </td>
+            <td>{{item['email']}}</td>
+            <td>{{item['created_at']}}</td>
+            <td><a href ='/show_user/{{item['id']}}'> show </a></td> 
+            <td><a href='/delete_user/{{item['id']}}'> Delete</a></td> 
+             <td><a href ='/edit_user/{{item['id']}}'> Edit </a></td> 
+        </tr>
+        {% endfor %}
+    </table>
+        <hr>
+    <a href ='/add_new_user'> Add new user</a>
+
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display</title>
+</head>
+<body>
+    {% for item in user_info %}
+    User {{item.id}}
+    <p>
+      Full name  :  {{item.first_name}}{{item.last_name}}</p>
+    <p>  email      :  {{item.email}} </p>
+     <p> created at :   {{item.created_at}}
+
+    </p>
+    <a href='/delete_user/{{item['id']}}'> Delete</a>
+    <a href='/edit_user/{{item['id']}}'> Edit</a>
+    {% endfor %}
+</body>
+</html>
